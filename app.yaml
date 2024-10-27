@@ -1,0 +1,11 @@
+runtime: python39  # Bạn có thể sử dụng runtime khác nếu cần
+
+handlers:
+  - url: /
+    static_files: index.html  # Tệp chính của bạn
+    upload: index.html
+
+  - url: /(.*)
+    static_files: \1
+    upload: (.*)
+
